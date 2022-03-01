@@ -1,2 +1,2 @@
 # BamboozApp
-Challenge your friends !
+
