@@ -5,16 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import fr.isen.nadaud.bamboozapp.databinding.LoginLayoutBinding
+import fr.isen.nadaud.bamboozapp.databinding.LogoutLayoutBinding
 
-class LoginFragment : BamboozFragment() {
-    lateinit var binding: LoginLayoutBinding
+class LogoutFragment : BamboozFragment() {
+    lateinit var binding: LogoutLayoutBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = LoginLayoutBinding.inflate(layoutInflater, container, false)
+        binding = LogoutLayoutBinding.inflate(layoutInflater, container, false)
 
         return binding.root
     }
@@ -23,13 +24,8 @@ class LoginFragment : BamboozFragment() {
         super.onViewCreated(view, savedInstanceState)
         setOnClick()
     }
-    fun setOnClick(){
-        //Make actions
-        binding.btnLogin.setOnClickListener(View.OnClickListener { view ->
 
-        })
-        binding.btnLogout.setOnClickListener(View.OnClickListener { view ->
-            this.goToFragment(LogoutFragment())
-        })
+    fun setOnClick() {
+
     }
 }

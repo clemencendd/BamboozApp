@@ -9,6 +9,8 @@
     <string name="label_welcome">Bienvenue</string>
 
     <!-- Page Login -->
+    <string name="label_last_name">Nom</string>
+    <string name="label_first_name">Prénom</string>
     <string name="label_mail">Adresse e-mail</string>
     <string name="label_password">Mot de passe</string>
     <string name="button_login_action">Se connecter</string>

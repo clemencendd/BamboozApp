@@ -9,7 +9,6 @@ open class BamboozFragment : Fragment() {
         val transaction = activity?.supportFragmentManager?.beginTransaction()
         if (transaction != null) {
             transaction.replace(R.id.container, fragment)
-            transaction.disallowAddToBackStack()
             transaction.commit()
         }
     }
