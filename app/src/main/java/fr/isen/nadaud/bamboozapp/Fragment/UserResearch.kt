@@ -1,4 +1,4 @@
-package fr.isen.nadaud.bamboozapp
+package fr.isen.nadaud.bamboozapp.Fragment
 
 
 import android.os.Bundle
