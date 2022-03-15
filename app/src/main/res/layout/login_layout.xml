@@ -3,77 +3,100 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/bambooz_orange">
 
-    <LinearLayout
-        android:id="@+id/mail"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/password"
-        android:layout_marginBottom="50dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="50dp"
 
-        <TextView
+        android:background="@drawable/bambooz_button_round"
+        android:backgroundTint="@color/white">
+
+
+        <LinearLayout
+            android:id="@+id/mail"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="@string/label_mail"
-            android:paddingStart="20dp"
-            android:textSize="20sp"
-            android:gravity="center_vertical"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
 
-        <EditText
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:text="@string/label_mail"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etMail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_baseline_email_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:text="@string/label_password"
+                android:textSize="20sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_above="@+id/buttons"
-        android:orientation="vertical"
-        android:id="@+id/password">
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/ic_baseline_lock_24" />
 
-        <TextView
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/buttons"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="@string/label_password"
-            android:paddingStart="20dp"
-            android:textSize="20sp"
-            android:gravity="center_vertical"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/bambooz_button_round"
+                android:text="@string/button_login_action" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/bambooz_button_round"
+                android:backgroundTint="@color/bambooz_grey"
+                android:text="@string/button_logout" />
+
+        </LinearLayout>
 
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="50dp"
-        android:layout_marginBottom="100dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:id="@+id/buttons">
+    </RelativeLayout>
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginVertical="20dp"
-            android:text="@string/button_login_action"
-            android:background="@drawable/bambooz_button_round"/>
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="@string/button_logout"
-            android:layout_marginVertical="20dp"
-            android:background="@drawable/bambooz_button_round"/>
-
-    </LinearLayout>
 </RelativeLayout>

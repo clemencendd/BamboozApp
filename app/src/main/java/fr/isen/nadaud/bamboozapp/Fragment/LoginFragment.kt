@@ -26,10 +26,21 @@ class LoginFragment : BamboozFragment() {
     fun setOnClick(){
         //Make actions
         binding.btnLogin.setOnClickListener(View.OnClickListener { view ->
-
+            //Login function
+            login()
         })
         binding.btnLogout.setOnClickListener(View.OnClickListener { view ->
-            this.goToFragment(LogoutFragment())
+            this.goToFragment(SignUpFragment())
         })
+    }
+
+    fun login(){
+        //Get all values from layout
+
+        val mailValue = binding.etMail.text
+        val passwordValue = binding.etPassword.text
+
+
+
     }
 }

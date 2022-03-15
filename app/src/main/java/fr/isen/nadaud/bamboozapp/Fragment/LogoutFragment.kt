@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import fr.isen.nadaud.bamboozapp.databinding.LoginLayoutBinding
 import fr.isen.nadaud.bamboozapp.databinding.LogoutLayoutBinding
 
-class LogoutFragment : BamboozFragment() {
+class SignUpFragment : BamboozFragment() {
     lateinit var binding: LogoutLayoutBinding
 
     override fun onCreateView(

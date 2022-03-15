@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import fr.isen.nadaud.bamboozapp.databinding.FragmentUserResearchBinding
 import fr.isen.nadaud.bamboozapp.databinding.WelcomeLayoutBinding
 
+// Notion héritage avec BamboozFragment
 class WelcomeFragment : BamboozFragment() {
 
     lateinit var binding: WelcomeLayoutBinding
@@ -24,7 +25,11 @@ class WelcomeFragment : BamboozFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //fonction du fragment
+        hideBottomNav()
         setOnClick()
+
     }
 
     fun setOnClick(){
@@ -32,8 +37,8 @@ class WelcomeFragment : BamboozFragment() {
         binding.btnLogin.setOnClickListener(View.OnClickListener { view ->
             this.goToFragment(LoginFragment())
         })
-        binding.btnLogout.setOnClickListener(View.OnClickListener { view ->
-            this.goToFragment(LogoutFragment())
+        binding.btnSignup.setOnClickListener(View.OnClickListener { view ->
+            this.goToFragment(SignUpFragment())
         })
     }
 }
