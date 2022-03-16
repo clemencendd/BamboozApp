@@ -30,7 +30,7 @@ class LoginFragment : BamboozFragment() {
             login()
         })
         binding.btnLogout.setOnClickListener(View.OnClickListener { view ->
-            this.goToFragment(SignUpFragment())
+            this.goToFragment(WelcomeFragment())
         })
     }
 
@@ -39,6 +39,7 @@ class LoginFragment : BamboozFragment() {
 
         val mailValue = binding.etMail.text
         val passwordValue = binding.etPassword.text
+        this.goToFragment(ActuFragment())
 
 
 

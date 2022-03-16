@@ -15,7 +15,7 @@ open class BamboozFragment : Fragment() {
     fun goToFragment(fragment: BamboozFragment){
         val transaction = activity?.supportFragmentManager?.beginTransaction()
         if (transaction != null) {
-            transaction.replace(R.id.nav_fragment, fragment)
+            transaction.add(R.id.nav_fragment, fragment)
             transaction.commit()
         }
     }
