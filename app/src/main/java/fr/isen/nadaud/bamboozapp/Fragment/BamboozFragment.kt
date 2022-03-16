@@ -32,6 +32,17 @@ open class BamboozFragment : Fragment() {
         bottomNavigationView = activity?.findViewById(R.id.bottom_navigatin_view)
         val navController = activity?.findNavController(R.id.nav_fragment)
         bottomNavigationView!!.setupWithNavController(navController!!)
+
+        bottomNavigationView!!.setOnNavigationItemSelectedListener { it ->
+            when(it.itemId){
+                R.id.searchFragment->goToFragment(SearchFragment())
+                R.id.publishFragment->goToFragment(publishFragment())
+                R.id.actuFragment->goToFragment(ActuFragment())
+                R.id.mapFragment->goToFragment(MapFragment())
+                R.id.profileFragment->goToFragment(ProfileFragment())
+            }
+            true
+        }
     }
 
 

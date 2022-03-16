@@ -3,12 +3,7 @@ package fr.isen.nadaud.bamboozapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import fr.isen.nadaud.bamboozapp.Fragment.WelcomeFragment
+import fr.isen.nadaud.bamboozapp.Fragment.*
 
 class MainActivity : AppCompatActivity() {
 

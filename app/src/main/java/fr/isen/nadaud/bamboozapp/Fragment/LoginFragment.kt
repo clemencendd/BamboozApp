@@ -30,7 +30,7 @@ class LoginFragment : BamboozFragment() {
             login()
         })
         binding.btnLogout.setOnClickListener(View.OnClickListener { view ->
-            this.goToFragment(WelcomeFragment())
+            this.goToFragment(SignUpFragment())
         })
     }
 
