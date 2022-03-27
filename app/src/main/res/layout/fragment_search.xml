@@ -3,14 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/bambooz_grey_light"
     tools:context=".Fragment.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Recherche" />
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:text="Rechercher"
+        android:drawablePadding="20dp"
+        android:paddingLeft="20dp"
+        android:textAlignment="gravity"/>
 
 </FrameLayout>
