@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">BamboozApp</string>
+    <string name="google_maps_key">AIzaSyAwGI6KWqs4QhUfJnOwWD1XyyAVNaO68kA</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
