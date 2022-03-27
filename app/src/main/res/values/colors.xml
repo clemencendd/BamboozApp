@@ -2,6 +2,7 @@
 <resources>
     <color name="bambooz_orange">#F39B79</color>
     <color name="bambooz_grey">#bcbcbc</color>
+    <color name="bambooz_grey_light">#eeeeee</color>
     <color name="bambooz_black">#FF000000</color>
 
     <color name="purple_500">#FF6200EE</color>

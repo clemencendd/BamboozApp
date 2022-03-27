@@ -16,8 +16,8 @@
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
-        android:id="@+id/publishFragment"
-        android:name="fr.isen.nadaud.bamboozapp.Fragment.publishFragment"
+        android:id="@+id/PublishFragment"
+        android:name="fr.isen.nadaud.bamboozapp.Fragment.PublishFragment"
         android:label="fragment_publish"
         tools:layout="@layout/fragment_publish" />
     <fragment

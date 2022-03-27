@@ -36,7 +36,7 @@ open class BamboozFragment : Fragment() {
         bottomNavigationView!!.setOnNavigationItemSelectedListener { it ->
             when(it.itemId){
                 R.id.searchFragment->goToFragment(SearchFragment())
-                R.id.publishFragment->goToFragment(publishFragment())
+                R.id.PublishFragment->goToFragment(PublishFragment())
                 R.id.actuFragment->goToFragment(ActuFragment())
                 R.id.mapFragment->goToFragment(MapFragment())
                 R.id.profileFragment->goToFragment(ProfileFragment())
