@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import fr.isen.nadaud.bamboozapp.Adapter.ActuAdapter
 import fr.isen.nadaud.bamboozapp.R
+import fr.isen.nadaud.bamboozapp.databinding.FragmentActuBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,6 +23,10 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class ActuFragment : BamboozFragment() {
+
+    var binding : FragmentActuBinding? = null
+
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,6 +44,8 @@ class ActuFragment : BamboozFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        binding = FragmentActuBinding.inflate(inflater, container, false)
+
         return inflater.inflate(R.layout.fragment_actu, container, false)
     }
 
@@ -43,8 +54,14 @@ class ActuFragment : BamboozFragment() {
 
         //fonction du fragment
         showBottomNav()
+        val dataSet = arrayOf("a", "b", "c")
+        var adapter = ActuAdapter(dataSet);
+
+        binding?.recycleViewActu?.layoutManager = LinearLayoutManager(requireContext())
+        binding?.recycleViewActu?.adapter = adapter
 
     }
+
 
     companion object {
         /**

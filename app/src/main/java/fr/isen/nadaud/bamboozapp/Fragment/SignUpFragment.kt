@@ -26,6 +26,9 @@ class SignUpFragment : BamboozFragment() {
     }
 
     fun setOnClick() {
+        binding.btnLogin.setOnClickListener(View.OnClickListener { view ->
+            this.goToFragment(LoginFragment())
 
+        })
     }
 }
