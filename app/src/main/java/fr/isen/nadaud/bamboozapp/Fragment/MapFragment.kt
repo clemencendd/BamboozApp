@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -11,6 +12,8 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import fr.isen.nadaud.bamboozapp.R
 import fr.isen.nadaud.bamboozapp.databinding.FragmentMapBinding
 
@@ -31,30 +34,39 @@ class MapFragment : BamboozFragment(){
         supportMapFragment!!.getMapAsync { googleMap ->
             // When map is loaded
             mMap = googleMap
-            addMapkers()
+            addMapkers(mMap)
             mMap.setOnMapClickListener { latLng -> // When clicked on map
 
             }
         }
-
         return rootView
     }
 
-    fun addMapkers(){
-        val markerPosition = LatLng(43.117030, 5.932195)
-        // Initialize marker options
-        val markerOptions = MarkerOptions()
-        // Set position of marker
-        markerOptions.position(markerPosition)
-        // Set title of marker
-        markerOptions.title(markerPosition.latitude.toString() + " : " + markerPosition.longitude)
-        // Remove all marker
-        mMap.clear()
-        // Animating to zoom the marker
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(markerPosition, 10f))
-        // Add marker on map
-        mMap.addMarker(markerOptions)
+    private fun addMapkers(map: GoogleMap){
 
+        val database = Firebase.database("https://bamboozapp-default-rtdb.firebaseio.com/").getReference("challenge")
+
+        database.get().addOnSuccessListener {
+
+            for (ds in it.children) {
+
+                if (it.exists()) {
+
+                    val latitude = ds.child("latitude").getValue(Double::class.java) as Double
+                    val longitude = ds.child("longitude").getValue(Double::class.java) as Double
+                    val name = ds.child("name").getValue(String::class.java)
+                    val description = ds.child("description").getValue(String::class.java)
+
+                    val position = LatLng(latitude, longitude)
+                    val zoomLevel = 15f // f : float number
+
+                    map.addMarker(MarkerOptions().position(position).title(description))
+                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(position, zoomLevel))
+
+                }
+            }
+
+
+        }
     }
-
 }
