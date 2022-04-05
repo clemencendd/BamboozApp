@@ -54,11 +54,10 @@ class MapFragment : BamboozFragment(){
 
                     val latitude = ds.child("latitude").getValue(Double::class.java) as Double
                     val longitude = ds.child("longitude").getValue(Double::class.java) as Double
-                    val name = ds.child("name").getValue(String::class.java)
                     val description = ds.child("description").getValue(String::class.java)
 
                     val position = LatLng(latitude, longitude)
-                    val zoomLevel = 15f // f : float number
+                    val zoomLevel = 5f // f : float number
 
                     map.addMarker(MarkerOptions().position(position).title(description))
                     map.moveCamera(CameraUpdateFactory.newLatLngZoom(position, zoomLevel))

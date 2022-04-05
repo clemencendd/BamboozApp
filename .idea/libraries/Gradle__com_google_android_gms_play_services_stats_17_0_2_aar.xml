@@ -2,12 +2,13 @@
   <library name="Gradle: com.google.android.gms:play-services-stats:17.0.2@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c401d34e0cbd2ed368162013410b7158/transformed/play-services-stats-17.0.2/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4cf131cbb7a406b60e899df5f5661645/transformed/play-services-stats-17.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4cf131cbb7a406b60e899df5f5661645/transformed/play-services-stats-17.0.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4cf131cbb7a406b60e899df5f5661645/transformed/play-services-stats-17.0.2/res" />
+      <root url="file://$USER_HOME$/gradle-7.2-bin/gradle-7.2/caches/transforms-3/4cf131cbb7a406b60e899df5f5661645/transformed/play-services-stats-17.0.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/gradle-7.2-bin/gradle-7.2/caches/transforms-3/4cf131cbb7a406b60e899df5f5661645/transformed/play-services-stats-17.0.2/res" />
+      <root url="jar://$USER_HOME$/gradle-7.2-bin/gradle-7.2/caches/transforms-3/4cf131cbb7a406b60e899df5f5661645/transformed/play-services-stats-17.0.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-stats/17.0.2/c0d58b8efa926b2c607984c54fb3d274490badd1/play-services-stats-17.0.2-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/gradle-7.2-bin/gradle-7.2/caches/modules-2/files-2.1/com.google.android.gms/play-services-stats/17.0.2/c0d58b8efa926b2c607984c54fb3d274490badd1/play-services-stats-17.0.2-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES />
   </library>
